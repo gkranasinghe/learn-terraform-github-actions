@@ -11,13 +11,22 @@ terraform {
   }
   required_version = ">= 1.1.0"
 
-  cloud {
+  # cloud {
+  #   organization = "gkranasinghe"
+
+  #   workspaces {
+  #     name = "gh-actions-demo"
+  #   }
+  # }
+
+  backend "remote" {
     organization = "gkranasinghe"
 
     workspaces {
-      name = "gh-actions-demo"
+      prefix = "gkranasinghe-"
     }
   }
+
 }
 
 provider "aws" {
