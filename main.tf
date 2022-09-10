@@ -19,7 +19,7 @@ terraform {
   #   }
   # }
 
-    backend "remote" {
+  backend "remote" {
     organization = "gkranasinghe"
 
     workspaces {
